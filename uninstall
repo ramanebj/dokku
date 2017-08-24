@@ -1,0 +1,10 @@
+Debian Installation
+
+# purge dokku from your system
+apt-get purge -y --force-yes dokku herokuish
+
+# remove any dependencies that are no longer necessary
+apt-get -y --force-yes autoremove
+
+# remove all
+sudo apt-get purge -yf dokku nginx nginx-common docker-engine herokuish && sudo apt autoremove -yf && sudo rm -rf /var/lib/dokku/ /home/dokku/ /usr/bin/dokku /var/www/html/
